@@ -55,8 +55,8 @@ class MyCardViewBody extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) => PaymentDetails()),
             );
-          }),
-          SizedBox(height: 12),
+          }, text: 'Complete Payment',),
+          SizedBox(height: 16),
         ],
       ),
     );
