@@ -1,5 +1,6 @@
 import 'package:checkout_payment/features/checkout/presentation/views/my_card_view.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/payment_details.dart';
+import 'package:checkout_payment/features/checkout/presentation/views/thank_you_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class CheckoutPayment extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PaymentDetails(),
+      home: ThankYouView(),
     );
   }
 }

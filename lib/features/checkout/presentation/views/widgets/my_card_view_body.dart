@@ -10,7 +10,6 @@ class MyCardViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double h = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(

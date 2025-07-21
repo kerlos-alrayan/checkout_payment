@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:checkout_payment/features/checkout/presentation/views/thank_you_view.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/custom_bottom.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/custom_credit_card.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/payment_method_list_view.dart';
@@ -44,6 +45,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                     formKey.currentState!.save();
                     log('pay');
                   } else {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ThankYouView()));
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
                   }
