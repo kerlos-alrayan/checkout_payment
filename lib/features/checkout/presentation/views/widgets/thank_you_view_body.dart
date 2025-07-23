@@ -22,7 +22,7 @@ class ThankYouViewBody extends StatelessWidget {
 
         // CustomDashedLine
         Positioned(
-          bottom: h * 0.27,
+          bottom: h * 0.275,
           left: 55,
           right: 55,
           child: CustomDashedLine(),
@@ -31,12 +31,12 @@ class ThankYouViewBody extends StatelessWidget {
         // CustomHalfContainer
         Positioned(
           bottom: h * 0.25,
-          left: 10,
+          left: 0,
           child: CustomHalfCircleAvatar(),
         ),
         Positioned(
           bottom: h * 0.25,
-          right: 10,
+          right: 0,
           child: CustomHalfCircleAvatar(),
         ),
       ],
