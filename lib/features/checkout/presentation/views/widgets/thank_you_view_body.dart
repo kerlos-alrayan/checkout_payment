@@ -1,4 +1,4 @@
-import 'package:checkout_payment/features/checkout/presentation/views/widgets/cusrom_dashed_line.dart';
+import 'package:checkout_payment/features/checkout/presentation/views/widgets/custom_dashed_line.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/custom_chek_icon.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/thank_you_card.dart';
 import 'package:flutter/material.dart';

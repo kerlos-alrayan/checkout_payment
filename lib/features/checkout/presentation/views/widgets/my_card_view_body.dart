@@ -1,9 +1,8 @@
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/custom_bottom.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/order_info_item.dart';
+import 'package:checkout_payment/features/checkout/presentation/views/widgets/payment_method_list_view.dart';
 import 'package:checkout_payment/features/checkout/presentation/views/widgets/total_price_widget.dart';
 import 'package:flutter/material.dart';
-
-import '../payment_details.dart';
 
 class MyCardViewBody extends StatelessWidget {
   const MyCardViewBody({super.key});
@@ -50,12 +49,44 @@ class MyCardViewBody extends StatelessWidget {
           ),
           TotalPrice(title: 'Total', value: r'$50.97'),
           SizedBox(height: 16),
-          CustomBottom(onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => PaymentDetails()),
-            );
-          }, text: 'Complete Payment',),
+          CustomBottom(
+            onTap: () {
+              // Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentDetails()));
+              showModalBottomSheet(
+                  context: context,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  builder: (context) {
+                    return PaymentMethodsBottomSheet();
+                  });
+            },
+            text: 'Complete Payment',
+          ),
           SizedBox(height: 16),
+        ],
+      ),
+    );
+  }
+}
+
+class PaymentMethodsBottomSheet extends StatelessWidget {
+  const PaymentMethodsBottomSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 16,
+          ),
+          PaymentMethodsListview(),
+          SizedBox(
+            height: 32,
+          ),
+          CustomBottom(text: 'Continue'),
         ],
       ),
     );
